@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-6 19:30:56 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.plat.common.beans.BaseModel" table="BASEMODEL" abstract="true">
+        <id name="id" type="java.lang.String">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
+        <property name="delFlag" type="java.lang.Integer">
+            <column name="DELFLAG" />
+        </property>
+        <property name="insertTime" type="java.lang.String">
+            <column name="INSERTTIME" />
+        </property>
+        <property name="insertUser" type="java.lang.String">
+            <column name="INSERTUSER" />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+        <property name="sortNum" type="java.lang.Integer">
+            <column name="SORTNUM" />
+        </property>
+        <property name="updateTime" type="java.lang.String">
+            <column name="UPDATETIME" />
+        </property>
+        <property name="updateUser" type="java.lang.String">
+            <column name="UPDATEUSER" />
+        </property>
+    </class>
+</hibernate-mapping>

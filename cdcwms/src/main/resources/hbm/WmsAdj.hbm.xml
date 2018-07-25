@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-23 11:13:16 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsAdj" table="wms_adj"
+		optimistic-lock="version">
+		<id name="id" type="string">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="adjCode" type="string">
+			<column name="Adj_code" length="30">
+			</column>
+		</property>
+		<property name="adjTime" type="string">
+			<column name="Adj_time" length="19">
+			</column>
+		</property>
+		<property name="adjReason" type="string">
+			<column name="Adj_reason" length="100">
+			</column>
+		</property>
+		<property name="whCode" type="string">
+			<column name="wh_code" length="100">
+			</column>
+		</property>
+		<property name="gcode" type="string">
+			<column name="G_code" length="30">
+			</column>
+		</property>
+		<property name="gtype" type="string">
+			<column name="G_type" length="30">
+			</column>
+		</property>
+		<property name="oraCode" type="string">
+			<column name="ora_code" length="30">
+			</column>
+		</property>
+		<property name="boxCode" type="string">
+			<column name="Box_code" length="30">
+			</column>
+		</property>
+		<property name="storageCode" type="string">
+			<column name="Storage_code" length="30">
+			</column>
+		</property>
+		<property name="goalNum" type="java.lang.Integer">
+			<column name="Goal_num">
+			</column>
+		</property>
+		<property name="usedNum" type="java.lang.Integer">
+			<column name="Used_num">
+			</column>
+		</property>
+		<property name="adjNum" type="java.lang.Integer">
+			<column name="Adj_num">
+			</column>
+		</property>
+		<property name="batchCode" type="string">
+			<column name="Batch_code" length="30">
+			</column>
+		</property>
+		<property name="traceCode" type="string">
+			<column name="Trace_code" length="30">
+			</column>
+		</property>
+		<property name="statu" type="java.lang.Integer">
+			<column name="Statu">
+			</column>
+		</property>
+		<property name="type" type="java.lang.Integer">
+			<column name="type">
+			</column>
+		</property>
+		<property name="lockStock" type="java.lang.Integer">
+			<column name="Lock_stock">
+			</column>
+		</property>
+		<property name="insertUser" type="string">
+			<column name="Insert_user" length="19">
+			</column>
+		</property>
+		<property name="insertTime" type="string">
+			<column name="Insert_time" length="19">
+			</column>
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="19">
+			</column>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

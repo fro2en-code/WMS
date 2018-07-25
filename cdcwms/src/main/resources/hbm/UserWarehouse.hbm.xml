@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 
+    人员仓库关系
+-->
+<hibernate-mapping>
+	<class name="com.wms.userRelation.UserWarehouse" table="user_warehouse">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="userId" type="java.lang.String">
+			<column name="User_Id" length="32" not-null="true">
+				<comment>库管用户编号</comment>
+			</column>
+		</property>
+		<property name="userLoginname" type="java.lang.String">
+			<column name="User_Loginname" length="50" >
+				<comment>库管用户登陆名</comment>
+			</column>
+		</property>
+		<property name="whCode" type="java.lang.String">
+			<column name="wh_code" length="32" not-null="true">
+				<comment>所属仓库编号</comment>
+			</column>
+		</property>
+		<property name="whName" type="java.lang.String">
+			<column name="wh_name" length="32" not-null="true">
+			</column>
+		</property>
+		<property name="updateUser" type="java.lang.String" update="true">
+			<column name="update_user" length="32">
+				<comment>最后更新人</comment>
+			</column>
+		</property>
+		<property name="updateTime" type="java.lang.String" update="true">
+			<column name="update_time" length="19">
+				<comment>最后更新时间</comment>
+			</column>
+		</property>
+		<property name="truename" type="java.lang.String">
+			<column name="true_name" length="30" >
+				<comment>真实姓名</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

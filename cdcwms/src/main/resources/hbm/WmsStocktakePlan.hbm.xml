@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-23 11:13:16 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsStocktakePlan" table="wms_stocktake_plan"
+		optimistic-lock="version">
+		<id name="id" type="string">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="takePlanCode" type="string">
+			<column name="Take_plan_code" length="30">
+			</column>
+		</property>
+		<property name="beginDatetime" type="string">
+			<column name="Begin_datetime" length="19">
+			</column>
+		</property>
+		<property name="endDatetime" type="string">
+			<column name="End_datetime" length="19">
+			</column>
+		</property>
+		<property name="takeWokerCode" type="string">
+			<column name="Take_woker_code" length="32">
+			</column>
+		</property>
+		<property name="takeType" type="java.lang.Integer">
+			<column name="Take_type">
+			</column>
+		</property>
+		<property name="zoneCode" type="string">
+			<column name="Zone_code" length="32">
+			</column>
+		</property>
+		<property name="storageCode" type="string">
+			<column name="Storage_code" length="32">
+			</column>
+		</property>
+		<property name="whCode" type="string">
+			<column name="wh_code" length="32">
+			</column>
+		</property>
+		<property name="batchCode" type="string">
+			<column name="Batch_code" length="32">
+			</column>
+		</property>
+		<property name="gcode" type="string">
+			<column name="G_code" length="32">
+			</column>
+		</property>
+		<property name="ownerCode" type="string">
+			<column name="owner_code" length="30">
+			</column>
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="status" length="30">
+			</column>
+		</property>
+		<property name="insertUser" type="string">
+			<column name="Insert_user" length="19">
+			</column>
+		</property>
+		<property name="insertTime" type="string">
+			<column name="Insert_time" length="19">
+			</column>
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="19">
+			</column>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

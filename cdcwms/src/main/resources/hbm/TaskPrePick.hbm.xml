@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.wms.business.TaskPrePick" table="task_Pre_Pick">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="expression" type="string">
+			<column name="expression" />
+		</property>
+		<property name="gname" type="string">
+			<column name="G_Name" />
+		</property>
+		<property name="gcode" type="string">
+			<column name="G_Code" />
+		</property>
+		<property name="gtype" type="string">
+			<column name="G_TYPE" />
+		</property>
+		<property name="prePickNum" type="java.lang.Integer">
+			<column name="Pre_pick_num" />
+		</property>
+		<property name="reqPackageNum" type="java.lang.Integer">
+			<column name="REQ_PACKAGE_NUM" />
+		</property>
+		<property name="sendPackageNum" type="java.lang.Integer">
+			<column name="SEND_PACKAGE_NUM" />
+		</property>
+		<property name="whCode" type="string">
+			<column name="Wh_code" />
+		</property>
+		<property name="whName" type="string">
+			<column name="wh_Name" />
+		</property>
+		<property name="oraCode" type="string">
+			<column name="ora_code" />
+		</property>
+		<property name="oraName" type="string">
+			<column name="ora_name" />
+		</property>
+		<property name="insertUser" type="string" update="false">
+			<column name="Insert_user" />
+		</property>
+		<property name="insertTime" type="string" update="false">
+			<column name="Insert_time" />
+		</property>
+	</class>
+</hibernate-mapping>

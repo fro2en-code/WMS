@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.wms.business.WmsTotalAccount" table="wms_total_account" optimistic-lock="version">
+		<id name="id" type="java.lang.String">
+			<column name="id"/>
+			<generator class="uuid2"/>
+		</id>
+		<version name="version" column="version" type="integer"/>
+		<property name="gcode" type="java.lang.String">
+			<column name="G_code" length="32">
+				<comment>物料代码</comment>
+			</column>
+		</property>
+		<property name="gname" type="java.lang.String">
+			<column name="G_Name" length="50">
+				<comment>物料名称</comment>
+			</column>
+		</property>
+		<property name="oraCode" type="java.lang.String">
+			<column name="ora_code" length="32">
+				<comment>供应商代码</comment>
+			</column>
+		</property>
+		<property name="oraName" type="java.lang.String">
+			<column name="ora_Name" length="50">
+				<comment>供应商名称</comment>
+			</column>
+		</property>
+		<property name="whCode" type="java.lang.String">
+			<column name="wh_code" length="32">
+				<comment>仓库代码</comment>
+			</column>
+		</property>
+		<property name="whName" type="java.lang.String">
+			<column name="wh_Name" length="50">
+				<comment>仓库名称</comment>
+			</column>
+		</property>
+		<property name="totalNum" type="java.lang.Integer">
+			<column name="total_num">
+				<comment>库存数量</comment>
+			</column>
+		</property>
+		<property name="gtype" type="java.lang.String">
+			<column name="g_type" length="10">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

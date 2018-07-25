@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.StockReport" table="StockReport">
+		<id name="id" type="java.lang.String">
+			<column length="36" name="ID" />
+			<generator class="uuid2" />
+		</id>
+		<property column="beforeStock" name="beforeStock" type="integer" />
+		<property column="endTime" name="endTime" type="string" />
+		<property column="whCode" name="whCode" type="string" />
+		<property column="goodsAlias" name="goodsAlias" type="string" />
+		<property column="goodsCode" name="goodsCode" type="string" />
+		<property column="goodsName" name="goodsName" type="string" />
+		<property column="goodsType" name="goodsType" type="string" />
+		<property column="inStock" name="inStock" type="integer" />
+		<property column="nowStock" name="nowStock" type="integer" />
+		<property column="oraCode" name="oraCode" type="string" />
+		<property column="oraName" name="oraName" type="string" />
+		<property column="outStock" name="outStock" type="integer" />
+		<property column="reportDate" name="reportDate" type="string" />
+		<property column="startTime" name="startTime" type="string" />
+	</class>
+</hibernate-mapping>

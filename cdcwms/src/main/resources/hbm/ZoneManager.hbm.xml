@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- 
+    库区管理人
+-->
+<hibernate-mapping>
+    <class name="com.wms.userRelation.ZoneManager" table="wms_zone_manager">
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="36" />
+            <generator class="uuid2" />
+        </id>
+        <property name="groupid" type="java.lang.String">
+            <column name="Groupid" length="32" >
+                <comment>货位组编码</comment>
+            </column>
+        </property>
+        <property name="zonecode" type="java.lang.String">
+            <column name="Zone_code" length="32" >
+                <comment>所属库区编号</comment>
+            </column>
+        </property>
+
+        <property name="whcode" type="java.lang.String">
+            <column name="Wh_code" length="32" >
+                <comment>所属仓库编号</comment>
+            </column>
+        </property>
+        <property name="userid" type="java.lang.String">
+            <column name="User_id" length="32" >
+                <comment>库管用户编号</comment>
+            </column>
+        </property>
+        <property name="userloginname" type="java.lang.String">
+            <column name="User_loginname" length="50" >
+                <comment>库管用户登陆名</comment>
+            </column>
+        </property>
+
+        <property name="updateUser" type="java.lang.String" update="true">
+            <column name="update_user" length="32" >
+                <comment>最后更新人</comment>
+            </column>
+        </property>
+        <property name="updateTime" type="java.lang.String" update="true">
+            <column name="update_time" length="19" >
+                <comment>最后更新时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

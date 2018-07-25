@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsHandworkSendList" table="wms_handwork_send_list">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="mapSheetNo" type="string">
+			<column name="MAP_SHEET_NO" length="50">
+			</column>
+		</property>
+		<property name="partNo" type="string">
+			<column name="PART_NO" length="20">
+			</column>
+		</property>
+		<property name="supplNo" type="string">
+			<column name="SUPPL_NO" length="20">
+			</column>
+		</property>
+		<property name="sxCardNo" type="string">
+			<column name="SX_CARD_NO" length="40">
+			</column>
+		</property>
+		<property name="sendPackageNo" type="string">
+			<column name="SEND_PACKAGE_NO" length="40">
+			</column>
+		</property>
+		<property name="sendPackageNum" type="java.lang.Integer">
+			<column name="SEND_PACKAGE_NUM">
+			</column>
+		</property>
+		<property name="reqPackageNum" type="java.lang.Integer">
+			<column name="REQ_PACKAGE_NUM">
+			</column>
+		</property>
+		<property name="reqQty" type="java.lang.Integer">
+			<column name="REQ_QTY">
+			</column>
+		</property>
+		<property name="sendQty" type="java.lang.Integer">
+			<column name="send_QTY">
+			</column>
+		</property>
+		<property name="receiveQty" type="java.lang.Integer">
+			<column name="receive_QTY">
+			</column>
+		</property>
+		<property name="whCode" type="string">
+			<column name="wh_code" length="50">
+			</column>
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="50">
+			</column>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

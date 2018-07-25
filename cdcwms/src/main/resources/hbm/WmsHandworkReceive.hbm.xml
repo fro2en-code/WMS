@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsHandworkReceive" table="wms_handwork_receive">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="mapSheetNo" type="string" update="false">
+			<column name="MAP_SHEET_NO" length="50">
+			</column>
+		</property>
+		<property name="isEmerge" type="java.lang.Integer">
+			<column name="IS_EMERGE">
+			</column>
+		</property>
+		<property name="whCode" type="string">
+			<column name="wh_code" length="50">
+			</column>
+		</property>
+		<property name="lastRecRequrieTime" type="string">
+			<column name="LAST_REC_REQURIE_TIME" length="19">
+			</column>
+		</property>
+		<property name="mriCreateTime" type="string">
+			<column name="mriCreateTime" length="19" />
+		</property>
+		<property name="lastUpdateTime" type="string">
+			<column name="lastUpdateTime" length="19" />
+		</property>
+		<property name="mriStatus" type="string">
+			<column name="MRI_STATUS" length="3">
+			</column>
+		</property>
+		<property name="mriType" type="string">
+			<column name="MRI_TYPE" length="3">
+			</column>
+		</property>
+		<property name="sheetSuppRecTime" type="string">
+			<column name="SHEET_SUPP_REC_TIME" length="19">
+			</column>
+		</property>
+		<property name="deliveryRec" type="string">
+			<column name="DELIVERY_REC" length="20">
+			</column>
+		</property>
+		<property name="deliveryRecType" type="string">
+			<column name="DELIVERY_REC_TYPE" length="100">
+			</column>
+		</property>
+		<property name="deliverySend" type="string">
+			<column name="DELIVERY_SEND" length="20">
+			</column>
+		</property>
+		<property name="pullType" type="string">
+			<column name="PULL_TYPE" length="3">
+			</column>
+		</property>
+		<property name="sheetStatus" type="string">
+			<column name="SHEET_STATUS" length="3">
+			</column>
+		</property>
+		<property name="plantNo" type="string">
+			<column name="PLANT_NO" length="4">
+			</column>
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="status">
+			</column>
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="50">
+			</column>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19">
+			</column>
+		</property>
+		<property name="beginTime" type="string">
+			<column name="Begin_time" length="50">
+			</column>
+		</property>
+		<property name="endTime" type="string">
+			<column name="End_time" length="19">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

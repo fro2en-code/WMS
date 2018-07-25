@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsTaskBillList" table="wms_task_bill_list"
+		optimistic-lock="version">
+		<id name="id" type="string">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="billid" type="string">
+			<column name="billid" length="32">
+			</column>
+		</property>
+		<property name="parentid" type="string">
+			<column name="parentId" length="32">
+			</column>
+		</property>
+		<property name="gcode" type="string">
+			<column name="g_code" length="32">
+			</column>
+		</property>
+		<property name="gname" type="string">
+			<column name="g_name" length="50">
+			</column>
+		</property>
+		<property name="gtype" type="string">
+			<column name="G_TYPE" length="10">
+			</column>
+		</property>
+		<property name="oraCode" type="string">
+			<column name="ora_code" length="32">
+			</column>
+		</property>
+		<property name="oraName" type="string">
+			<column name="ora_name" length="50">
+			</column>
+		</property>
+				<property name="boxCardid" type="string">
+			<column name="Box_cardid" length="32">
+			</column>
+		</property>
+		<property name="abcType" type="string">
+			<column name="Abc_Type" length="10">
+			</column>
+		</property>
+		<property name="boxType" type="string">
+			<column name="Box_type" length="32">
+			</column>
+		</property>
+		<property name="boxContent" type="java.lang.Integer">
+			<column name="Box_content">
+			</column>
+		</property>
+		<property name="boxNum" type="java.lang.Integer">
+			<column name="Box_num">
+			</column>
+		</property>
+		<property name="goodNeedNum" type="java.lang.Integer">
+			<column name="good_need_num">
+			</column>
+		</property>
+		<property name="goodRealNum" type="java.lang.Integer">
+			<column name="good_real_num">
+			</column>
+		</property>
+
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="19">
+			</column>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19">
+			</column>
+		</property>
+
+	</class>
+</hibernate-mapping>

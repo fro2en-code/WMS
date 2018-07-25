@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-14 15:34:26 by Hibernate Tools 5.2.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.wms.warehouse.WmsObject" table="wms_object" optimistic-lock="version">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36"/>
+			<generator class="uuid2"/>
+		</id>
+		<version name="version" column="version" type="integer"/>
+		<property name="whCode" type="string">
+			<column name="Wh_code" length="32"/>
+		</property>
+		<property name="whName" type="string">
+			<column name="Wh_name" length="50"/>
+		</property>
+		<property name="gcode" type="string">
+			<column name="G_code" length="32"/>
+		</property>
+		<property name="gname" type="string">
+			<column name="G_name" length="50"/>
+		</property>
+		<property name="gtype" type="string">
+			<column name="G_TYPE" length="10"/>
+		</property>
+		<property name="supCode" type="string">
+			<column name="sup_code" length="32"/>
+		</property>
+		<property name="supName" type="string">
+			<column name="Sup_name" length="50"/>
+		</property>
+		<property name="batchCode" type="string">
+			<column name="Batch_code" length="32"/>
+		</property>
+		<property name="inTime" type="string">
+			<column name="In_time" length="19"/>
+		</property>
+		<property name="outTime" type="string">
+			<column name="out_time" length="19"/>
+		</property>
+		<property name="quantity" type="java.lang.Integer">
+			<column name="Quantity"/>
+		</property>
+		<property name="lockNum" type="java.lang.Integer">
+			<column name="Lock_num"/>
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="50"/>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19"/>
+		</property>
+	</class>
+</hibernate-mapping>

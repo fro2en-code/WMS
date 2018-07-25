@@ -1,0 +1,28 @@
+package ${package.Service};
+
+import ${package.Entity}.${entity};
+import ${superServiceClassPackage};
+
+/**
+ * <p>
+ * ${comment} 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${serviceName} extends ${superServiceClass}<${entity}> {
+	#foreach ($i in $list)
+		$i
+	#end
+	
+	#if(${entity}=='MyEntity')
+		true
+	#else
+		false
+	#end
+	
+	#if(${test2}>4)
+		true
+	#end
+}

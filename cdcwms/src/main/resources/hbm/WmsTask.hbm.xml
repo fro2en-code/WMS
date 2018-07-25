@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.wms.business.WmsTask" table="wms_task" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="ID" length="36" />
+            <generator class="uuid2" />
+        </id>
+        <property name="taskdesc" type="string">
+            <column name="Taskdesc" length="32">
+            </column>
+        </property>
+        <property name="billid" type="string">
+            <column name="Billid" length="32">
+            </column>
+        </property>
+        <property name="whCode" type="string">
+            <column name="wh_code" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="level" type="java.lang.Integer">
+            <column name="Level">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="Type">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="beginTime" type="string">
+            <column name="begin_time" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="acceptTime" type="string">
+            <column name="accept_time" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endTime" type="string">
+            <column name="end_time" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="Status">
+            </column>
+        </property>
+        <property name="executorId" type="string">
+            <column name="executorId" length="32">
+            </column>
+        </property>
+        <property name="executorName" type="string">
+            <column name="executorName" length="32">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

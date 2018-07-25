@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsSupplierSend" table="wms_supplier_send">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="mapSheetNo" type="string" update="false">
+			<column name="MAP_SHEET_NO" length="50">
+			</column>
+		</property>
+		<property name="isEmerge" type="java.lang.Integer">
+			<column name="IS_EMERGE" precision="10" scale="0">
+			</column>
+		</property>
+		<property name="whCode" type="string">
+			<column name="WH_CODE" length="30">
+			</column>
+		</property>
+		<property name="status" type="java.lang.Integer">
+			<column name="Status">
+			</column>
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="50">
+			</column>
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19">
+			</column>
+		</property>
+		<property name="supplNo" type="string">
+			<column name="SUPPL_NO" length="19">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

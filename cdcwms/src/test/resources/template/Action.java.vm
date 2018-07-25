@@ -1,0 +1,45 @@
+package ${basePackage}.${unitName}.action;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.plat.common.action.BaseAction;
+import com.plat.common.page.PageData;
+import ${basePackage}.${unitName}.${entry};
+
+import ${basePackage}.${unitName}.biz.${entry}Biz;
+
+/**
+ * 
+ * @author ${author}
+ *
+ * @since ${date}
+ */
+@Controller
+@RequestMapping("/${entryName}")
+public class AccountAction extends BaseAction {
+
+    @Resource
+    private ${entry}Biz ${entryName}Biz;
+
+    /**
+     * 渲染页面
+     */
+    @RequestMapping("/toList.action")
+    public String toList() {
+        return "${entryName}List";
+    }
+
+    /**
+     * 查询台账表分页
+     */
+    @RequestMapping("/list.action")
+    @ResponseBody
+    public PageData<${entryName}> list(int page, int rows, ${entry} ${entryName}) {
+        return ${entryName}Biz.getPageData(page, rows, entryName);
+    }
+}

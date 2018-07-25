@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.wms.business.WmsStockLockLog" table="wms_stock_locklog">
+		<id name="id" type="string">
+			<column name="ID" length="36"/>
+			<generator class="uuid2"/>
+		</id>
+		<property name="number" column="number" type="string" length="45"/>
+		<property name="whCode" column="wh_Code" type="string" length="45"/>
+		<property name="endTime" column="endTime" type="string" length="45"/>
+		<property name="exector" column="exector" type="string" length="45"/>
+		<property name="gCode" column="g_Code" type="string" length="45"/>
+		<property name="gName" column="g_Name" type="string" length="45"/>
+		<property name="gType" column="g_Type" type="string" length="45"/>
+		<property name="oraCode" column="ora_Code" type="string" length="45"/>
+		<property name="oraName" column="ora_Name" type="string" length="45"/>
+		<property name="startTime" column="startTime" type="string" length="45"/>
+		<property name="type" column="type" type="string" length="45"/>
+		<property name="state" column="state" type="string" length="45"/>
+		<property name="insertTime" column="insertTime" type="string" length="45" update="false"/>
+		<property name="insertUser" column="insertUser" type="string" length="45" update="false"/>
+		<property name="updateUser" column="updateUser" type="string" length="45"/>
+		<property name="updateTime" column="updateTime" type="string" length="45"/>
+	</class>
+</hibernate-mapping>

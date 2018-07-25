@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-23 11:13:16 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsStocktake" table="wms_stocktake"
+		optimistic-lock="version">
+		<id name="id" type="string">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="takeWokerCode" type="string">
+			<column name="Take_woker_code" length="32">
+			</column>
+		</property>
+		<property name="takePlanCode" type="string">
+			<column name="Take_plan_code" length="32">
+			</column>
+		</property>
+		<property name="lineNum" type="java.lang.Integer">
+			<column name="Line_num">
+			</column>
+		</property>
+		<property name="storageCode" type="string">
+			<column name="Storage_code" length="32">
+			</column>
+		</property>
+		<property name="whCode" type="string">
+			<column name="wh_code" length="32">
+			</column>
+		</property>
+		<property name="gcode" type="string">
+			<column name="G_code" length="32">
+			</column>
+		</property>
+		<property name="gname" type="string">
+			<column name="G_name" length="50">
+			</column>
+		</property>
+		<property name="gtype" type="string">
+			<column name="G_type" length="50">
+			</column>
+		</property>
+		<property name="oraCode" type="string">
+			<column name="ora_code" length="50">
+			</column>
+		</property>
+		<property name="batchCode" type="string">
+			<column name="Batch_code" length="30">
+			</column>
+		</property>
+		<property name="quantity" type="java.lang.Integer">
+			<column name="Quantity">
+			</column>
+		</property>
+		<property name="actQuantity" type="java.lang.Integer">
+			<column name="Act_quantity">
+			</column>
+		</property>
+		<property name="statu" type="java.lang.Integer">
+			<column name="Statu">
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

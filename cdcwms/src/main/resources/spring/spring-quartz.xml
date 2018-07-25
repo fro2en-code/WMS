@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+    http://www.springframework.org/schema/task      
+    http://www.springframework.org/schema/task/spring-task.xsd">
+	<!-- <bean id="lesReceiveJobBDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"> <ref bean="lesReceiveJobBService" /> </property>
+		<property name="targetMethod"> <value>execute</value> </property> </bean>
+		<bean id="lesSendJobADetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"> <ref bean="lesSendJobAService" /> </property>
+		<property name="targetMethod"> <value>execute</value> </property> </bean>
+		<bean id="lesSendJobDDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"> <ref bean="lesSendJobDService" /> </property>
+		<property name="targetMethod"> <value>execute</value> </property> </bean>
+		<bean id="lesSendJobCDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"> <ref bean="lesSendJobCService" /> </property>
+		<property name="targetMethod"> <value>execute</value> </property> </bean>
+		<bean id="lesReceiveJobBTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="lesReceiveJobBDetail" /> <property name="cronExpression"
+		value="0 0/5 6-20 * * ?" /> </bean> <bean id="lesSendJobATrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="lesSendJobADetail" /> <property name="cronExpression"
+		value="0 0/3 6-20 * * ?" /> </bean> <bean id="lesSendJobCTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="lesSendJobCDetail" /> <property name="cronExpression"
+		value="0 0/3 6-20 * * ?" /> </bean> <bean id="lesSendJobDTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="lesSendJobDDetail" /> <property name="cronExpression"
+		value="0 0/3 6-20 * * ?" /> </bean> --> <!-- 月报表 -->
+	<!-- <bean id="stockReportDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"> <ref bean="reportUnit" /> </property> <property
+		name="targetMethod"> <value>runSotckReport</value> </property> </bean> <bean
+		id="stockReportJobBTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="stockReportDetail" /> <property name="cronExpression"
+		value="0 0 0 1 * ?" /> </bean> -->
+
+
+	<bean name="quartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<!-- <property name="triggers"> <list> <ref local="lesReceiveJobBTrigger"
+			/> <ref local="lesSendJobATrigger" /> <ref local="lesSendJobCTrigger" />
+			<ref local="lesSendJobDTrigger" /> <ref local="stockReportJobBTrigger" />
+			</list> </property> -->
+		<property name="dataSource">
+			<ref bean="dataSources"/>
+		</property>
+		<property name="applicationContextSchedulerContextKey" value="applicationContext"/>
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.scheduler.instanceName">cmcWMSscheduler</prop>
+				<prop key="org.quartz.scheduler.instanceId">AUTO</prop>
+				<prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
+				<prop key="org.quartz.threadPool.threadCount">20</prop>
+				<prop key="org.quartz.threadPool.threadPriority">5</prop>
+				<prop key="org.quartz.jobStore.misfireThreshold">120000</prop>
+				<prop key="org.quartz.jobStore.class">org.quartz.impl.jdbcjobstore.JobStoreTX</prop>
+				<prop key="org.quartz.jobStore.isClustered">true</prop>
+				<prop key="org.quartz.jobStore.clusterCheckinInterval">15000</prop>
+				<prop key="org.quartz.jobStore.maxMisfiresToHandleAtATime">1</prop>
+				<prop key="org.quartz.jobStore.tablePrefix">qrtz_</prop>
+				<prop key="org.quartz.jobStore.dataSource">qzDS</prop>
+			</props>
+		</property>
+		<!--可选，QuartzScheduler启动时更新己存在的Job，这样就不用每次修改targetObject后删除qrtz_job_details表对应记录了 -->
+		<property name="overwriteExistingJobs" value="true"/>
+
+		<!--设置自动启动 -->
+		<property name="autoStartup" value="true"/>
+	</bean>
+
+</beans>  

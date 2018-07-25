@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.wms.business.WmsTaskLog" table="wms_task_log" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="ID" length="36" />
+            <generator class="uuid2" />
+        </id>
+        <property name="billid" type="string">
+            <column name="Billid" length="32">
+            </column>
+        </property>
+        <property name="whCode" type="string">
+            <column name="wh_code" length="32">
+            </column>
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="Type">
+            </column>
+        </property>
+        <property name="beginTime" type="string">
+            <column name="begin_time" length="19">
+            </column>
+        </property>
+        <property name="endTime" type="string">
+            <column name="end_time" length="19">
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="Status">
+            </column>
+        </property>
+        <property name="updateUser" type="string">
+            <column name="Update_user" length="50">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

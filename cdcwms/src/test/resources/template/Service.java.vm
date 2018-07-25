@@ -1,0 +1,23 @@
+package ${basePackage}.${unitName}.service;
+
+import java.util.List;
+
+import com.plat.common.page.PageData;
+import com.plat.common.result.ResultResp;
+import ${basePackage}.${unitName}.${entry};
+
+import its.base.service.BaseService;
+
+/**
+ * 
+ * @author ${author}
+ *
+ * @since ${date}
+ */
+public interface ${entry}Service extends BaseService<${entry}> {
+
+    /**
+     * 分页查询
+     */
+    PageData<${entry}> getPageData(int page, int rows, ${entry} ${entryName});
+}

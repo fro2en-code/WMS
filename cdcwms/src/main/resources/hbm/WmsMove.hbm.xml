@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-23 11:13:16 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.WmsMove" table="wms_move" optimistic-lock="version">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36" />
+			<generator class="uuid2" />
+		</id>
+		<property name="whCode" type="string">
+			<column name="wh_code" length="32" />
+		</property>
+		<property name="moveCode" type="string">
+			<column name="Move_code" length="32" />
+		</property>
+		<property name="moveTime" type="string">
+			<column name="Move_time" length="19" />
+		</property>
+		<property name="moveReason" type="string">
+			<column name="Move_reason" length="100" />
+		</property>
+		<property name="gcode" type="string">
+			<column name="G_code" length="32" />
+		</property>
+		<property name="gname" type="string">
+			<column name="G_name" length="50" />
+		</property>
+		<property name="supCode" type="string">
+			<column name="Sup_code" length="32" />
+		</property>
+		<property name="supName" type="string">
+			<column name="Sup_name" length="50" />
+		</property>
+		<property name="gtype" type="string">
+			<column name="G_TYPE" length="10">
+			</column>
+		</property>
+		<property name="batchCode" type="string">
+			<column name="Batch_code" length="32" />
+		</property>
+		<property name="boxCode" type="string">
+			<column name="Box_code" length="32" />
+		</property>
+		<property name="usedZoneCode" type="string">
+			<column name="Used_zone_code" length="32" />
+		</property>
+		<property name="usedStorageCode" type="string">
+			<column name="Used_storage_code" length="32" />
+		</property>
+		<property name="newZoneCode" type="string">
+			<column name="New_zone_code" length="32" />
+		</property>
+		<property name="newStorageCode" type="string">
+			<column name="New_storage_code" length="32" />
+		</property>
+		<property name="moveNum" type="java.lang.Integer">
+			<column name="Move_num" />
+		</property>
+		<property name="statu" type="java.lang.Integer">
+			<column name="Statu" />
+		</property>
+		<property name="insertUser" type="string">
+			<column name="Insert_user" length="50" />
+		</property>
+		<property name="insertTime" type="string">
+			<column name="Insert_time" length="19" />
+		</property>
+		<property name="updateUser" type="string">
+			<column name="Update_user" length="50" />
+		</property>
+		<property name="updateTime" type="string">
+			<column name="Update_time" length="19" />
+		</property>
+	</class>
+</hibernate-mapping>

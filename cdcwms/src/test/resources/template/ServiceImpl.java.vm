@@ -1,0 +1,37 @@
+package ${basePackage}.${unitName}.service.impl;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.plat.common.page.PageData;
+import com.plat.common.result.CommonResp;
+import com.plat.common.result.ResultResp;
+import com.plat.common.utils.StringUtil;
+import ${basePackage}.${unitName}.${entry};
+
+import its.base.service.BaseServiceImpl;
+import ${basePackage}.${unitName}.service.${entry}Service;
+
+/**
+ * 
+ * @author ${author}
+ *
+ * @since ${date}
+ */
+@Service("${entryName}Service")
+public class ${entry}ServiceImpl extends BaseServiceImpl<${entry}> implements ${entry}Service {
+
+    /**
+     * 分页
+     */
+    @Override
+    public PageData<${entry}> getPageData(int page, int rows, ${entry} ${entryName}) {
+        return getPageDataByBaseHql("From ${entry} where 1=1 ", null, page, rows,
+                new ArrayList<Serializable>());
+    }
+}

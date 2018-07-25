@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-22 16:50:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+	<class name="com.wms.business.TaskFlow" table="task_flow">
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="36"/>
+			<generator class="uuid2"/>
+		</id>
+		<property name="nextTask" type="string">
+			<column name="nextTask"/>
+		</property>
+		<property name="nowTask" type="string">
+			<column name="nowTask"/>
+		</property>
+		<property name="nowPerson" type="string">
+			<column name="nowPerson"/>
+		</property>
+		<property name="nowRole" type="string">
+			<column name="nowRole"/>
+		</property>
+		<property name="nextTaskCode" type="java.lang.Integer">
+			<column name="nextTaskCode"/>
+		</property>
+		<property name="nowTaskCode" type="java.lang.Integer">
+			<column name="nowTaskCode"/>
+		</property>
+		<property name="whCode" type="string">
+			<column name="wh_Code"/>
+		</property>
+
+		<property name="cron" column="cron" type="string" length="60"/>
+	</class>
+</hibernate-mapping>
